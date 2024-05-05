@@ -7,7 +7,59 @@ import "@/styles/globals.css";
 <Layout title="Frontend Mentor | Creative single page site">
   <!-- THE HEADER -->
   <Header />
-  <main class=""></main>
+  <main class="">
+    <!-- Branding & website design agency -->
+    <section
+      class="flex flex-col gap-16 md:max-2xl:flex-row-reverse md:max-2xl:gap-0"
+    >
+      <picture>
+        <source
+          media="(min-width:1440px )"
+          srcset="/public/assets/desktop/image-hero.jpg"
+        />
+        <source
+          media="(min-width:768px )"
+          srcset="/public/assets/tablet/image-hero.jpg"
+        />
+        <img
+          src="/public/assets/mobile/image-hero.jpg"
+          alt=""
+          class="md:max-2xl:relative"
+        />
+      </picture>
+      <div
+        class="mx-6 flex flex-col gap-10 text-[#000] md:ml-[2.44rem] md:mt-[4.81rem] md:gap-8 md:max-2xl:absolute md:max-2xl:left-0 xl:ml-[10.31rem] xl:mt-[11.5rem] xl:gap-12"
+      >
+        <div
+          class="flex flex-col gap-[0.94rem] md:gap-[1.19rem] xl:gap-[2.44rem]"
+        >
+          <h1
+            class="text-[2.5rem] font-extrabold leading-10 md:w-[24.875rem] md:text-[3.5rem] md:leading-[3.5rem] xl:w-[44.625rem] xl:text-[5rem] xl:leading-[5.5rem]"
+          >
+            Branding & website design agency
+          </h1>
+          <p
+            class="text-[0.9375rem] font-normal leading-[1.5625rem] md:w-[24.875rem] xl:w-[33.75rem] xl:text-lg xl:leading-8"
+          >
+            We specialize in visual storytelling by creating cohesive brand and
+            website design solutions for small businesses, giving lasting
+            impressions to audiences in a digital world.
+          </p>
+        </div>
+        <div class="">
+          <button
+            type="button"
+            class="h-[4.5rem] w-[11.0625rem] bg-[#F94F4F] text-lg font-extrabold
+          leading-normal text-[#fff] transition-all duration-500 ease-linear hover:bg-[#FF9393]"
+          >
+            learn More
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Design is strategic. -->
+    <section class="flex flex-col"></section>
+  </main>
 </Layout>
 
 <style></style>
