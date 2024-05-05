@@ -15,14 +15,14 @@ import "@/styles/globals.css";
       <picture>
         <source
           media="(min-width:1440px )"
-          srcset="/public/assets/desktop/image-hero.jpg"
+          srcset="/assets/desktop/image-hero.jpg"
         />
         <source
           media="(min-width:768px )"
-          srcset="/public/assets/tablet/image-hero.jpg"
+          srcset="/assets/tablet/image-hero.jpg"
         />
         <img
-          src="/public/assets/mobile/image-hero.jpg"
+          src="/assets/mobile/image-hero.jpg"
           alt=""
           class="md:max-2xl:relative"
         />
@@ -58,7 +58,52 @@ import "@/styles/globals.css";
       </div>
     </section>
     <!-- Design is strategic. -->
-    <section class="flex flex-col"></section>
+    <section class="mt-24 flex flex-col md:max-2xl:flex-row md:max-xl:mt-0">
+      <picture>
+        <source
+          media="(min-width:1440px )"
+          srcset="/assets/desktop/image-strategic.jpg"
+        />
+        <source
+          media="(min-width:768px )"
+          srcset="/assets/tablet/image-strategic.jpg"
+        />
+        <img src="/assets/mobile/image-strategic.jpg" alt="" class="" />
+      </picture>
+      <div
+        class="relative flex flex-col gap-10 bg-[#191921] px-6 py-[4.5rem] md:h-[33.625rem] md:w-[24.375rem] md:gap-8 md:pb-[7.62rem] md:pl-[4.31rem] md:pr-10 md:pt-[5.5rem] xl:h-[49rem] xl:w-[44.0625rem] xl:gap-12 xl:pl-[9.62rem] xl:pt-[12.5rem]"
+      >
+        <div class="">
+          <img
+            src="/public/assets/desktop/bg-pattern-wave-red.svg"
+            alt=""
+            class="absolute -top-4 left-6 w-[3.9375rem] md:-left-10 md:top-[9rem] md:w-[5.438rem] xl:left-[-3.5rem] xl:top-[18rem] xl:w-[8.4375rem]"
+          />
+        </div>
+        <div class="flex flex-col gap-6 md:gap-8 xl:gap-[2.69rem]">
+          <h2
+            class="text-[2rem] font-extrabold leading-10 text-[#fff] md:w-[16.5625rem] xl:w-[25.625rem] xl:text-[3.5rem] xl:leading-[4rem]"
+          >
+            <span class="text-[#F94F4F]">Design</span> is strategic.
+          </h2>
+          <p
+            class="w-[20.4375rem] text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] md:w-[17.5625rem] xl:w-[27.8125rem] xl:text-lg xl:leading-8"
+          >
+            “A well-crafted design strategy consistently produces desired
+            outcomes and brand awareness. We are firm believers that success
+            lies in creative collaboration with our clients.”
+          </p>
+        </div>
+        <div class="">
+          <a
+            href="/"
+            class="relative cursor-pointer text-[0.9375rem] font-extrabold leading-normal text-[#F94F4F] transition-all duration-500 ease-linear after:absolute after:-bottom-[0.56rem] after:left-0 after:h-[0.125rem] after:w-[6.4375rem] after:bg-[#F94F4F] hover:text-[#FF9393] after:hover:bg-[#FF9393] xl:text-lg"
+          >
+            Schedule a Call</a
+          >
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
