@@ -2,14 +2,97 @@
 import "@/styles/globals.css";
 ---
 
-<header class="mx-6 mt-10 mb-[1.31rem]">
-    <!-- LOGO & MENU ICON -->
-    <div class="flex items-center justify-between gap-[8.88rem]">
-        <!-- LOGO -->
-        <img src="/public/assets/desktop/logo.svg" alt="logo" class="">
-        <!-- OPEN MENU -->
-        <img src="/public/assets/mobile/icon-hamburger.svg" alt="open menu" class="md:max-2xl:hidden" id="menuOpen">
-        <!-- CLOSE MENU -->
-        <img src="/public/assets/mobile/icon-cross.svg" alt="close menu" class="hidden" id="menuClose">
-    </div>
+<header class="relative md:flex md:items-center md:justify-between">
+  <!-- LOGO & MENU ICON -->
+  <div
+    class="flex items-center justify-between gap-[8.88rem] px-6 pb-[1.31rem] pt-10 md:pl-10 md:pt-[1.62rem] xl:pl-[10.31rem]"
+  >
+    <!-- LOGO -->
+    <img src="/public/assets/desktop/logo.svg" alt="logo" class="" />
+    <!-- OPEN MENU -->
+    <img
+      src="/public/assets/mobile/icon-hamburger.svg"
+      alt="open menu"
+      class="md:max-2xl:hidden"
+      id="menuOpen"
+    />
+    <!-- CLOSE MENU -->
+    <img
+      src="/public/assets/mobile/icon-cross.svg"
+      alt="close menu"
+      class="hidden"
+      id="menuClose"
+    />
+  </div>
+  <!-- MOBILE MENU -->
+  <nav
+    class="absolute right-[1.63rem] top-[6.5rem] hidden h-[18.25rem] w-[15.75rem] flex-col items-center gap-6 bg-[#191921] pb-[1.75rem] pl-[1.69rem] pr-[1.62rem] pt-8 text-center"
+    id="mobileMenu"
+  >
+    <ul class="flex flex-col items-center gap-6">
+      <li class="">
+        <a href="/" class="text-lg font-normal leading-8 text-[#fff]">About</a>
+      </li>
+      <li class="">
+        <a href="/" class="text-lg font-normal leading-8 text-[#fff]">Service</a
+        >
+      </li>
+      <li class="">
+        <a href="/" class="text-lg font-normal leading-8 text-[#fff]"
+          >Projects</a
+        >
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="h-16 w-[12.4375rem] bg-[#F94F4F] text-base font-extrabold leading-normal text-[#fff]"
+      >Schedule a call</button
+    >
+  </nav>
+  <!-- TABLET & DESKTOP MENU -->
+  <nav
+    class="hidden h-[11.125rem] w-[27.375rem] items-center justify-between gap-7 bg-[#F94F4F] px-[3.56rem] pl-[2.06rem] pr-10 md:max-2xl:flex xl:w-[44.0625rem] xl:gap-[3.06rem] xl:pl-[4.31rem] xl:pr-[10.31rem]"
+  >
+    <ul class="flex items-center justify-between gap-5 xl:gap-8">
+      <li class="">
+        <a href="/" class="text-[0.9375rem] font-normal leading-8 text-[#fff]"
+          >About</a
+        >
+      </li>
+      <li class="">
+        <a href="/" class="text-[0.9375rem] font-normal leading-8 text-[#fff]"
+          >Service</a
+        >
+      </li>
+      <li class="">
+        <a href="/" class="text-[0.9375rem] font-normal leading-8 text-[#fff]"
+          >Projects</a
+        >
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="h-16 w-[9.1875rem] bg-[#191921] text-base font-extrabold leading-normal text-[#fff] xl:w-[12.4375rem]"
+    >
+      Schedule a call
+    </button>
+  </nav>
 </header>
+
+<script is:inline>
+  const menuOpen = document.getElementById("menuOpen");
+  const menuClose = document.getElementById("menuClose");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuOpen.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+    menuOpen.classList.add("hidden");
+    menuClose.classList.remove("hidden");
+  });
+  menuClose.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    menuOpen.classList.remove("hidden");
+    menuClose.classList.add("hidden");
+  });
+</script>
